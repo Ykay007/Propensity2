@@ -144,9 +144,9 @@ for c in campid:
         return listo
     
     def Sex(x):
-        y=x.tolist()
+        #y=x.tolist()
         listo=[]
-        for i in y:
+        for i in x:
             if i == 'Male' or i == 'male' or i =='M':
                 sx= 1
             elif i == 'Female' or i == 'female' or i =='f':
@@ -198,7 +198,7 @@ for c in campid:
     
     df=df[~df.BirthDate.str.startswith('0')]
     df['Age']= dateformat2(df.BirthDate.tolist())
-    df['Sex']= Sex(df.Gender)
+    df['Sex']= Sex(df.Gender.tolist())
     df['SentDate'] = dateformat(df['SentDate'])
     df['DateOpen'] = dateformat(df['DateOpen'])
     df['Difference'] = date_check(df['SentDate'].tolist(),df['DateOpen'].tolist())
