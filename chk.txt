@@ -1,1 +1,0 @@
-https://stats.stackexchange.com/questions/267529/polynomial-regression-plot-predicted-value
